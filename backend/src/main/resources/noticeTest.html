@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Document</title>
+</head>
+<body>
+<button onclick="requestNotificationPermission()">알림 허용 요청</button>
+<br>
+<button onclick="connectToServer()">서버 연결</button>
+<button onclick="myClear()">clear</button>
+<br>
+<button onclick="window.open('http://localhost:8080/api/push/follow/5','window_name','width=430,height=500,location=no,status=no,scrollbars=yes');">
+    팔로우 알림 테스트
+</button>
+<br/>
+
+
+<div id="pushList">
+    <h3>이벤트 결과 출력</h3>
+</div>
+<script>
+    function myClear() {
+        document.getElementById("pushList").innerText = ""
+    }
+
+    function connectToServer() {
+        let userId = 5; // 사용자 아이디
+        let eventSource = new EventSource(`http://localhost:8080/api/push/connect/${userId}`, {
+            withCredentials: true,
+        });
+        eventSource.addEventListener('open', (event) => {
+            console.log(event)
+            showResult(`연결 시작`)
+            //showNotification(event.data);
+        })
+        eventSource.addEventListener('sse', (event) => {
+            console.log(event.lastEventId)
+            showResult(event.data);
+        })
+    }
+
+    function showNotification(data) {
+
+        if (Notification.permission === 'granted') {
+            const notificationOptions = {
+                body: data.content,
+                icon: 'path/to/icon.png', // 알림 아이콘
+            };
+
+            const notification = new Notification('Neighbrew알림', notificationOptions);
+
+            notification.onclick = function () {
+                console.log('알림이 클릭되었습니다!');
+            };
+
+            notification.onclose = function () {
+                console.log('알림이 닫혔습니다.');
+            };
+        }
+    }
+
+    function showResult(notificationData) {
+        const p = document.createElement("div");
+        p.innerText = notificationData;
+        document.getElementById("pushList").appendChild(p);
+    }
+
+    function requestNotificationPermission() {
+        Notification.requestPermission().then(function (permission) {
+            if (permission === 'granted') {
+                console.log('알림이 허용되었습니다!');
+            }
+        });
+    }
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
