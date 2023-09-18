@@ -1,0 +1,16 @@
+{
+  "name": "NeighBrew",
+  "short_name": "NeighBrew",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#A9D9BA",
+  "theme_color": "#FFFFFF",
+  "description": "NeighBrew",
+  "icons": [
+    {
+      "src": "icons/Logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

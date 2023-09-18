@@ -1,0 +1,39 @@
+version: "3"
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: ./Front
+      dockerfile: Dockerfile
+    environment:
+      - TZ=Asia/Seoul
+    ports:
+      - "5173:5173"
+
+  database:
+    container_name: database
+    image: mysql:latest
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=neighbrewbe-10
+      - TZ=Asia/Seoul
+      - MYSQL_DATABASE=neighbrew
+      - MYSQL_PASSWORD=neighbrewbe-10
+      - MYSQL_USER=neighbrewbe
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+
+  server:
+    container_name: server
+    environment:
+      - TZ=Asia/Seoul
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "9999:9999"
+    depends_on:
+      - database

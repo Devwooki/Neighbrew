@@ -1,0 +1,80 @@
+/** font import 영역 **/
+/* font-family: "JejuGothic"; */
+@import url("https://webfontworld.github.io/jeju/JejuGothic.css");
+/* font-family: "SeoulNamsan"; */
+@import url("https://webfontworld.github.io/seoulnamsan/SeoulNamsan.css");
+/* font-family: "Noto Sans KR"; */
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700&display=swap");
+
+/* 사용되는 컬러 변수화 */
+/* 사용예시: background: var(--c-lightgray); */
+:root {
+  --c-black: black;
+  --c-gray: #aaaaaa;
+  --c-lightgray: #f4f4f4;
+  --c-beige: #efe9e1;
+  /* --c-yellow: #f2bc79; */
+  /* --c-yellow: #26cec1; */
+  --c-yellow: #a9d9ba;
+  --c-pink: #f5acc7;
+  --c-borderline: #ececec;
+}
+
+body {
+  margin: 0px;
+}
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+}
+footer {
+  position: fixed;
+  bottom: 0px;
+  z-index: 10;
+  width: 100%;
+}
+#root {
+  max-width: 430px;
+  min-width: 350px;
+  text-align: center;
+  color: var(--c-black);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5rem;
+  background-color: white;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 430px;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0px;
+}
+
+p {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+.drinkCategories {
+  background-color: #ffffff;
+}
