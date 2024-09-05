@@ -160,9 +160,9 @@ s
 
 | <img src="https://avatars.githubusercontent.com/u/70623636?v=4" width="150"> |   <img src="docs/images/user/young.jpg" width="150">    |       <img src="docs/images/user/jun.JPG" width="150">       
 |:----------------------------------------------------------------------------:|:-------------------------------------------------------:|:------------------------------------------------------------:|
-|              [이현욱](https://github.com/Devwooki)</br>팀장 : BE 개발               | [인영교](https://github.com/yeongkyo1997) </br> BE 개발 및 배포 |     [최준서](https://github.com/wnstj7788)  </br> BE 개발 및 기획    |
+|              [이OO](https://github.com/Devwooki)</br>팀장 : BE 개발               | [인OO](https://github.com/yeongkyo1997) </br> BE 개발 및 배포 |     [최OO](https://github.com/wnstj7788)  </br> BE 개발 및 기획    |
 |             <img src="docs/images/user/dayoung.jpg" width="150">             |    <img src="docs/images/user/huck.jpg" width="150">    |       <img src="docs/images/user/bin.jpg" width="150">       
-|                [이다영](https://github.com/dayoung100)  </br> FE 개발  및 디자인      |          [강동혁](https://github.com/ztarhyuk127)   </br> FE 개발       |      [여현빈](https://github.com/godzz733)    </br> FE 개발       |
+|                [이OO](https://github.com/dayoung100)  </br> FE 개발  및 디자인      |          [강OO](https://github.com/ztarhyuk127)   </br> FE 개발       |      [여OO](https://github.com/godzz733)    </br> FE 개발       |
 
 <br/><br/>
 
